@@ -1,0 +1,17 @@
+{
+  "name": "timestamp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "morgan": "^1.7.0",
+    "to-unix-timestamp": "^1.0.1",
+    "ts": "0.0.0"
+  }
+}
