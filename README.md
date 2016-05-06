@@ -8,7 +8,7 @@ Example Input: (771292800 or June%2011%201994).
 
 If it does, it returns both the Unix timestamp and the natural language form of that date. 
 
-Example Output: {"unix": "771292800", "natural": "Sat Jun 11 1994 00:00:00 GMT+0000 (UTC) (21y 47w 1d 10h 3m 46s ago)""}
+Example Output: {"unix": "771292800", "natural": "11 Jun 1994"}
 
 If it does not contain a date or Unix timestamp, it returns null to home page.
 
