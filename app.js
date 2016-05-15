@@ -3,6 +3,10 @@ var morgan = require("morgan");
 var ts = require("readable-timestamp");
 var unix = require("to-unix-timestamp");
 
+
+var fs = require("fs");
+var file = "./index.html"
+
 var app = express();
 var port = process.env.PORT || 3000;
 var host = process.env.IP || 'localhost';
@@ -11,7 +15,15 @@ var host = process.env.IP || 'localhost';
 app.use(morgan('dev'));
 
 app.get('/', function(req,res){
-    res.send('<h1>Example</h1><div><h4>Input</h4><p>localhost:3000/771292800</p><p>localhost:3000/June%2011%201994</p><h4>Output</h4><p>{"unix": "771292800", "natural": "11 Jun 1994"}</p></div>');
+    res.writeHead(200, {
+        'Content-Type': "text/html"
+    });
+    
+    fs.readFile(file, "utf8", function(err, data){
+        if(err) throw err;
+        res.write(data);
+        res.end();
+    });
 });
 
 app.get('/:time', function(req, res){
